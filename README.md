@@ -8,7 +8,7 @@
 * Delay load Duoshuo comment
 * Delay load Swiftype Search
 
-### Settings
+### Configuration
 * Config `_config.yml` and `theme/shed/_config.yml`
 * Replace `theme/shed/source/img/favicon.ico` with your favicon
 * Replace 'swiftype_key' with your swiftype key at `theme/shed/source/js/blog.js` line 8
