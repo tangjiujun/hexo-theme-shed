@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-md-9">
+    <% page.posts.each(function(post){ %>
+      <%- partial('_partial/article', {post: post, index: true}) %>
+    <% }) %>
+    <ul class="pager">
+      <% if (page.prev != 0) { %>
+        <li class="previous"><a href="<%= url_for(page.prev_link) %>">← Newer</a></li>
+      <% } %>
+      <% if (page.next != 0) { %>
+        <li class="next"><a href="<%= url_for(page.next_link) %>">Older →</a></li>
+      <% } %>
+    </ul>
+  </div>
+
+  <div class="col-md-3">
+    <%- partial('_partial/snippet/sidebar') %>
+  </div>
+</div>

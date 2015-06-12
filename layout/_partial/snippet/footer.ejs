@@ -1,0 +1,15 @@
+<footer>
+  <div class="container">
+    <hr>
+    <div class="text-center">
+      <p>
+        © <%= theme.since %> - <%= date(Date.now(), 'YYYY') %> <%= config.author %> |
+        <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+      </p>
+      <p>
+        <a href="<%= url_for(theme.links.about) %>">About Me</a> |
+        <a href="<%= url_for(theme.links.feed) %>">Feed</a>
+      </p>
+    </div>
+  </div>
+</footer>

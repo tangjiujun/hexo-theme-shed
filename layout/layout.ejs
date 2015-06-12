@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <% var title = page.title;
+    if (is_archive()){
+      title = 'Archives';
+      if (is_month()) {
+        title += ': ' + page.year + '/' + page.month;
+      } else if (is_year()) {
+        title += ': ' + page.year;
+      }
+    } else if (is_category()) {
+      title = 'Category: ' + page.category;
+    } else if (is_tag()) {
+      title = 'Tag: ' + page.tag;
+    }
+    %>
+    <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
+    <%- css(['css/bootstrap.min.css', 'css/monokai_sublime.css', 'css/blog.css']) %>
+    <%- favicon_tag('favicon.ico') %>
+    <meta name="author" content="<%= config.author %>">
+    <!--[if lt IE 9]>
+      <script src="/js/html5shiv.min.js"></script>
+      <script src="/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <%- partial('_partial/snippet/header') %>
+    <div class="container">
+      <%- body %>
+    </div>
+    <%- partial('_partial/snippet/footer') %>
+    <%- js(['js/jquery.min.js', 'js/bootstrap.min.js', 'js/highlight.min.js', 'js/blog.js']) %>
+  </body>
+</html>

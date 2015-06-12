@@ -1,0 +1,56 @@
+<article class="article">
+  <div class="panel panel-default">
+    <div class="panel-body">
+
+      <div class="article-header">
+        <h1><%= post.title %></h1>
+        <% if (post.categories) { %>
+          <p>Post created at <%- date(post.date, config.date_format) %>
+            <span class="pull-right">
+              Category is &nbsp;
+              <% if (post.categories) { %>
+                <% post.categories.each(function(category){ %>
+                  <a href="<%- url_for(category.path) %>" class="pull-right"><%= category.name %></a>
+                <% })%>
+              <% } %>
+            </span>
+          </p>
+        <% } %>
+      </div>
+      <hr>
+
+      <div class="article-content">
+        <% if(index) { %>
+          <%- post.excerpt %>
+        <% } else { %>
+          <%- post.content %>
+        <% } %>
+      </div>
+      <hr>
+
+      <div class="article-footer">
+        <% if (post.tags) { %>
+          <% post.tags.each(function(tag){ %>
+            <a href="<%- url_for(tag.path) %>">#<%= tag.name %> </a>
+          <% })%>
+        <% } %>
+        <% if(index){ %>
+          <a href="<%= url_for(post.path) %>" class="pull-right">Read More →</a>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</article>
+
+<% if(!index) { %>
+  <ul class="pager">
+    <% if (post.prev) { %>
+      <li class="previous"><a href="<%= url_for(post.prev.path) %>">← <%= post.prev.title %></a></li>
+    <% } %>
+    <% if (post.next) { %>
+      <li class="next"><a href="<%= url_for(post.next.path) %>"><%= post.next.title %> →</a></li>
+    <% } %>
+  </ul>
+
+  <%- partial('_partial/snippet/comment') %>
+<% } %>

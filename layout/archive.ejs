@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-md-9">
+    <article class="article">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <% var last; %>
+          <% site.posts.sort('date', -1).each(function(post, i){ %>
+            <% var year = post.date.year(); %>
+            <% if (last != year){ %>
+              <% if (last != null){ %>
+                </ul></div>
+              <% } %>
+              <% last = year; %>
+              <div class="archive-list">
+              <h4 class="archive-year"><%= year %></h4>
+              <ul>
+            <% } %>
+              <li>
+                <time datetime="<%= post.date %>"><%= date(post.date, 'MM-DD') %> »</time>
+                <a href="<%- url_for(post.path) %>"><%- post.title %></a>
+              </li>
+          <% }) %>
+          <% if (page.posts.length){ %>
+            </ul></div>
+          <% } %>
+        </div>
+      </div>
+    </article>
+  </div>
+  <div class="col-md-3">
+    <%- partial('_partial/snippet/sidebar') %>
+  </div>
+</div>

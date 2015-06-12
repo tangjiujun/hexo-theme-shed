@@ -1,0 +1,28 @@
+<div class="sidebar">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <h5>Recent Posts</h5>
+      <ul>
+        <% site.posts.sort('date', -1).limit(5).each(function(post){ %>
+          <li>
+            <a href="<%- url_for(post.path) %>"><%= post.title %></a>
+          </li>
+        <% }) %>
+      </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <h5>Categories</h5>
+      <%- list_categories() %>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <h5>Tag Cloud</h5>
+      <%- list_tags({style: 'none'}) %>
+    </div>
+  </div>
+</div>
