@@ -1,20 +1,15 @@
-# 菜单
 menu:
   Projects: /projects
   Archives: /archives
 
-# 系列
 catena:
   Design Pattern: '/design-pattern'
 
-# 多说账号
 duoshuo_short_name: duoshuo_short_name
 
 links:
-  # 关于我
   about: /about.html
-  # 订阅地址
   feed: /atom.xml
 
-# 站点起始时间
+# site start time
 since: 2014
