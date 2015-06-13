@@ -1,0 +1,4 @@
+### Self update theme from my blog
+
+cp -rf /path/to/blog/theme/shed/layout /path/to/hexo-theme-shed/
+cp -rf /path/to/blog/theme/shed/source/{css,img,js} /path/to/hexo-theme-shed/source/
