@@ -2,8 +2,8 @@ menu:
   Projects: /projects
   Archives: /archives
 
-catena:
-  Design Pattern: '/design-pattern'
+# catena:
+#   Design Pattern: '/design-pattern'
 
 duoshuo_short_name: duoshuo_short_name
 
