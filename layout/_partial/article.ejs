@@ -7,10 +7,10 @@
         <% if (post.categories) { %>
           <p>Post created at <%- date(post.date, config.date_format) %>
             <span class="pull-right">
-              Category is &nbsp;
+              Category is
               <% if (post.categories) { %>
                 <% post.categories.each(function(category){ %>
-                  <a href="<%- url_for(category.path) %>" class="pull-right"><%= category.name %></a>
+                  <a href="<%- url_for(category.path) %>"><%= category.name %></a>
                 <% })%>
               <% } %>
             </span>
