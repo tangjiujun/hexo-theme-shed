@@ -16,9 +16,25 @@ git clone https://github.com/tangjiujun/hexo-theme-shed.git themes/shed
 ```
 
 ### Configuration
-* Replace `duoshuo_short_name` with your duoshuo short name at `theme/shed/_config.yml` line 8.
-* Replace `theme/shed/source/img/favicon.ico` with your `favicon.ico`.
-* Replace `swiftype_key` with your swiftype key at `theme/shed/source/js/blog.js` line 8
+
+```
+menu:
+  Projects: /projects
+  Archives: /archives
+
+# catena:
+  # Design Pattern: '/design-pattern'
+
+duoshuo_short_name: 'duoshuo short name'
+
+links:
+  about: /about.html
+  feed: /atom.xml
+
+site_start_time: 'site start time'
+
+swiftype_key: 'swiftype key'
+```
 
 ### Catena
 Write a series of posts, such as reading notes.
