@@ -8,6 +8,7 @@ function loadSwiftype(swiftype_key){
 }
 
 function loadDuoshuo(){
+  $('.ds-thread').html("");
   (function() {
     var ds = document.createElement('script');
     ds.type = 'text/javascript';ds.async = true;
@@ -30,10 +31,14 @@ $(document).ready(function() {
     clearTimeout(swiftypeTimeoutId);
   })
 
-  // Ajax load Comment
+  // Ajax load DuoShuo Comment
+  var duoshuoTimeoutId = setTimeout(function(){
+    if ($('.ds-thread a').length > 0) {loadDuoshuo();};
+    $('.ds-thread a').unbind('click');
+  }, 5000)
   $('.ds-thread a').one('click', function(){
-    $('.ds-thread').html("");
     loadDuoshuo();
+    clearTimeout(duoshuoTimeoutId);
   })
 
   // Highlight code
