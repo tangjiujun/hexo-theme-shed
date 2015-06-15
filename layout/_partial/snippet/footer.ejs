@@ -3,7 +3,7 @@
     <hr>
     <div class="text-center">
       <p>
-        © <%= theme.since %> - <%= date(Date.now(), 'YYYY') %> <%= config.author %> |
+        © <%= theme.site_start_time %> - <%= date(Date.now(), 'YYYY') %> <%= config.author %> |
         <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
       </p>
       <p>
@@ -13,3 +13,7 @@
     </div>
   </div>
 </footer>
+
+<div id="hidden-attribute">
+  <input id="swiftype-key" type="hidden" value="<%= theme.swiftype_key %>">
+</div>
