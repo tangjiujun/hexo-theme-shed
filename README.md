@@ -17,7 +17,7 @@ git clone https://github.com/tangjiujun/hexo-theme-shed.git themes/shed
 
 ### Configuration
 
-```
+```yaml
 menu:
   Projects: /projects
   Archives: /archives
