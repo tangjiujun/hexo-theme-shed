@@ -3,7 +3,11 @@
     <div class="panel-body">
 
       <div class="article-header">
-        <h1><%= post.title %></h1>
+        <% if(index) { %>
+          <h1><a href="<%= url_for(post.path) %>"><%= post.title %></a></h1>
+        <% } else { %>
+          <h1><%= post.title %></h1>
+        <% } %>
         <% if (post.categories) { %>
           <p>Post created at <%- date(post.date, config.date_format) %>
             <span class="pull-right">
