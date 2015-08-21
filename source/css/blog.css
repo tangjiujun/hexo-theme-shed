@@ -1,6 +1,8 @@
 body {
   padding-top: 100px;
-  background: aquamarine url("/img/bg.png") repeat fixed;
+  background-color: #86C408;
+  background-repeat: repeat;
+  background-attachment: fixed; 
 }
 footer {
   font-size: 80%;

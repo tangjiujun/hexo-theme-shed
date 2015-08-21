@@ -1,3 +1,8 @@
+<script type="text/javascript">
+  var num = Math.ceil((new Date().getMinutes() + 1) / 10) * (new Date().getHours() % 2 + 1);
+  document.getElementsByTagName("body")[0].style.backgroundImage = 'url("/img/bg' + num + '.jpg")';
+</script>
+
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
