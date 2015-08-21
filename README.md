@@ -7,6 +7,7 @@
 * Highlight code with Highlight.js
 * Delay load Duoshuo comment
 * Delay load Swiftype Search
+* Change backgound image per 10 minutes
 
 ### Install
 Execute the following command and modify theme in `_config.yml` to shed.
