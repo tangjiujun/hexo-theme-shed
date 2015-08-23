@@ -46,3 +46,11 @@ h5 {
 h6 {
   font-size: 1.2em;
 }
+table th {
+  padding: 8px;
+  border-bottom: 2px solid #ddd;
+}
+table td {
+  padding: 8px;
+  border-top: 1px solid #ddd;
+}
