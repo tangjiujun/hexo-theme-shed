@@ -19,16 +19,6 @@
         <% for (var i in theme.menu){ %>
           <li><a href="<%- url_for(theme.menu[i]) %>"><%= i %></a></li>
         <% } %>
-        <% if(theme.catena){ %>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Catena <span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-              <% for (var i in theme.catena){ %>
-                <li><a href="<%- url_for(theme.catena[i]) %>"><%= i %></a></li>
-              <% } %>
-            </ul>
-          </li>
-        <% } %>
       </ul>
 
       <form class="navbar-form navbar-right" role="search">

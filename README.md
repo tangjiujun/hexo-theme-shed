@@ -23,9 +23,6 @@ menu:
   Projects: /projects
   Archives: /archives
 
-# catena:
-  # Design Pattern: '/design-pattern'
-
 duoshuo_short_name: 'duoshuo short name'
 
 links:
@@ -37,16 +34,3 @@ site_start_time: 'site start time'
 swiftype_key: 'swiftype key'
 ```
 
-### Catena
-Write a series of posts, such as reading notes.
-
-```bash
-hexo new page 'algorithm'
-```
-
-Then config `theme/shed/_config.yml` catena, like below:
-
-```yaml
-catena:
-  Algorithm: /algorithm
-```
