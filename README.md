@@ -48,6 +48,5 @@ Then config `theme/shed/_config.yml` catena, like below:
 
 ```yaml
 catena:
-  Design Pattern: '/design-pattern'
   Algorithm: /algorithm
 ```
