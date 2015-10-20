@@ -1,0 +1,18 @@
+archives: Archives
+category: Category
+tag: Tag
+
+search: Search
+show_comments: Show Comments
+
+about_me: About Me
+feed: Feed
+
+pager:
+  prev: Newer
+  next: Older
+
+sidebar:
+  recent: Recent Posts
+  categories: Categories
+  tag_cloud: Tag Cloud

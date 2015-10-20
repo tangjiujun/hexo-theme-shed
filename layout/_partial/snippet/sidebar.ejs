@@ -1,7 +1,7 @@
 <div class="sidebar">
   <div class="panel panel-default">
     <div class="panel-body">
-      <h5>Recent Posts</h5>
+      <h5><%= __('sidebar.recent') %></h5>
       <ul>
         <% site.posts.sort('date', -1).limit(5).each(function(post){ %>
           <li>
@@ -14,14 +14,14 @@
 
   <div class="panel panel-default">
     <div class="panel-body">
-      <h5>Categories</h5>
+      <h5><%= __('sidebar.categories') %></h5>
       <%- list_categories() %>
     </div>
   </div>
 
   <div class="panel panel-default">
     <div class="panel-body">
-      <h5>Tag Cloud</h5>
+      <h5><%= __('sidebar.tag_cloud') %></h5>
       <%- list_tags({style: 'none'}) %>
     </div>
   </div>

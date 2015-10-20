@@ -1,14 +1,18 @@
-<footer>
+<footer class="footer">
   <div class="container">
     <hr>
     <div class="text-center">
       <p>
-        © <%= theme.site_start_time %> - <%= date(Date.now(), 'YYYY') %> <%= config.author %> |
-        <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+        <span>
+          © <%= theme.site_start_time %> - <%= date(Date.now(), 'YYYY') %> <%= config.author %> |
+          <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+        </span>
       </p>
       <p>
-        <a href="<%= url_for(theme.links.about) %>">About Me</a> |
-        <a href="<%= url_for(theme.links.feed) %>">Feed</a>
+        <span>
+          <a href="<%= url_for(theme.links.about) %>"><%= __('about_me') %></a> |
+          <a href="<%= url_for(theme.links.feed) %>"><%= __('feed') %></a>
+        </span>
       </p>
     </div>
   </div>

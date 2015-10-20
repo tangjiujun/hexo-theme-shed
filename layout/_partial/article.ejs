@@ -9,14 +9,17 @@
           <h1><%= post.title %></h1>
         <% } %>
         <% if (post.categories) { %>
-          <p>Post created at <%- date(post.date, config.date_format) %>
+          <p>
+            <% if (post.categories.length > 0) { %>
+              <span class="glyphicon glyphicon-tasks" aria-hidden="true"></span>
+              <% post.categories.each(function(category){ %>
+                <a href="<%- url_for(category.path) %>"><%= category.name %></a>
+              <% })%>
+            <% } %>
+            
             <span class="pull-right">
-              Category is
-              <% if (post.categories) { %>
-                <% post.categories.each(function(category){ %>
-                  <a href="<%- url_for(category.path) %>"><%= category.name %></a>
-                <% })%>
-              <% } %>
+              <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+              <%- date(post.date, config.date_format) %>
             </span>
           </p>
         <% } %>

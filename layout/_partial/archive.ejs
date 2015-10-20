@@ -5,10 +5,10 @@
     <% }) %>
     <ul class="pager">
       <% if (page.prev != 0) { %>
-        <li class="previous"><a href="<%= url_for(page.prev_link) %>">← Newer</a></li>
+        <li class="previous"><a href="<%= url_for(page.prev_link) %>">← <%= __('pager.prev') %></a></li>
       <% } %>
       <% if (page.next != 0) { %>
-        <li class="next"><a href="<%= url_for(page.next_link) %>">Older →</a></li>
+        <li class="next"><a href="<%= url_for(page.next_link) %>"><%= __('pager.next') %> →</a></li>
       <% } %>
     </ul>
   </div>
