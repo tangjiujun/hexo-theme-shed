@@ -20,7 +20,6 @@ git clone https://github.com/tangjiujun/hexo-theme-shed.git themes/shed
 
 ```yaml
 menu:
-  Projects: /projects
   Archives: /archives
 
 duoshuo_short_name: 'duoshuo short name'
@@ -32,5 +31,15 @@ links:
 site_start_time: 'site start time'
 
 swiftype_key: 'swiftype key'
+```
+
+### Recommended post front-matter
+
+```yaml
+# scaffolds/post.md
+title: {{ title }}
+date: {{ date }}
+category: 
+tags:
 ```
 
