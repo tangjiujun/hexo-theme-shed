@@ -33,9 +33,10 @@ site_start_time: 'site start time'
 swiftype_key: 'swiftype key'
 ```
 
-### Recommended post front-matter
+### Front-matter
 
 ```yaml
+# Recommand post front-matter
 # scaffolds/post.md
 title: {{ title }}
 date: {{ date }}
