@@ -9,6 +9,10 @@
 * Delay load Swiftype Search
 * Change backgound image per 10 minutes
 
+### Screenshots
+
+![screenshot.png](screenshot.png)
+
 ### Install
 Execute the following command and modify theme in `_config.yml` to shed.
 
